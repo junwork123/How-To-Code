@@ -2,13 +2,13 @@ Git 사용법에 대해서 정리한 문서입니다.
 원글은 본문 하단에 링크로 첨부합니다.
 
 # INDEX
-1. case : 오픈소스에 기여하기
+1. [case : 오픈소스에 기여하기](#contribute)
 
-# case : 오픈소스에 기여하기
+# case : 오픈소스에 기여하기<span id="contribute"></span>
 
 * 오픈소스를 먼저 fork를 하면 내 저장소에 저장된다.
 이후 내 컴퓨터 한켠에 소중하게 당겨와본다
-> git clone https://~~~.git
+> git clone https://~~~
 *****
 
 * 브랜치를 새로 만들어서 수정사항을 반영한다
@@ -50,3 +50,5 @@ origin 저장소에서 변경 사항을 가져와 현재 브랜치에 합치기
 1. [Git 명령어 정리](https://medium.com/@joongwon/git-git-%EB%AA%85%EB%A0%B9%EC%96%B4-%EC%A0%95%EB%A6%AC-c25b421ecdbd)
 2. [누구나 쉽게 이해할 수 있는 Git 입문](https://backlog.com/git-tutorial/kr/stepup/stepup1_1.html)
 3. [Delete commits history with git commands](https://gist.github.com/heiswayi/350e2afda8cece810c0f6116dadbe651)
+4. [깃허브로 취업하기](http://sujinlee.me/professional-github/)
+5. [오픈소스 입문을 위한 아주 구체적인 가이드](https://bit.ly/2RulANs)
