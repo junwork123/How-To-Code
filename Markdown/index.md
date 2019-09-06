@@ -66,6 +66,7 @@
 
 # 6. 코드<span id="code"></span>
 `(grave accent,억음부호)를 3개를 쓰고 그 옆에 언어의 종류를 쓴다
+
 HTML
 ```html
 <a href="https://www.google.co.kr/" target="_blank">GOOGLE</a>
@@ -87,6 +88,5 @@ print
 
 ## 참고자료
 1. [마크다운 사용법](https://heropy.blog/2017/09/30/markdown/)
-
 2. [마크다운 사용법](https://gist.github.com/ihoneymon/652be052a0727ad59601)
 
