@@ -12,7 +12,7 @@
 
 [6. 코드](#code)
 
-
+---
 
 # 1. 글머리<span id="header"></span>
 
@@ -28,6 +28,7 @@
 
 ###### 샵(#) 6개, 이게 마지막
 
+---
 
 # 2. 인용문<span id="quote"></span>
 > "꺾쇠로 인용문을 표시한다"
@@ -35,6 +36,7 @@
 
 >> "꺾쇠 두번으로 중첩된 인용문을 표시한다3"
 
+---
 
 # 3. 강조<span id="emphasize"></span>
 기울임 = *별표 한개*, _언더바 한개_ 로 감싼다
@@ -49,6 +51,7 @@
 
 인라인강조 = `인라인강조는 억음부호로 감싼다`
 
+---
 
 # 4. 목록<span id="list"></span>
 1. 순서가 필요한 목록
@@ -59,20 +62,22 @@
   * 별표(asterisks) 1개
   + 더하기(plus sign) 1개
 
+---
 
 # 5. 링크 및 이미지<span id="link"></span>
 [네이버, 대괄호(내용)+소괄호(링크)로 묶는다](https://www.naver.com/)
 
+---
 
 # 6. 코드<span id="code"></span>
 `(grave accent,억음부호)를 3개를 쓰고 그 옆에 언어의 종류를 쓴다
 
-HTML
++ HTML
 ```html
 <a href="https://www.google.co.kr/" target="_blank">GOOGLE</a>
 ```
 
-CSS
++ CSS
 ```css
 .list > li {
   position: absolute;
@@ -80,11 +85,15 @@ CSS
 }
 ```
 
-Python
++ Python
 ```python
 s = "Python syntax highlighting"
 print
 
+# 7. 구분선
+마이너스('---') 부호 3개를 쓰면 구분선 생성
+
+---
 
 ## 참고자료
 1. [마크다운 사용법](https://heropy.blog/2017/09/30/markdown/)
