@@ -1,8 +1,14 @@
 파이썬 문법 및 유용한 코드를 모아놓은 곳입니다.
 
 ## INDEX
+[1. 문자열 관련 메소드](#string)
 
-### 1. 문자열 관련 메소드
+[2. 정규표현식(re모듈)](#re)
+
+[3. 파싱 라이브러리 BeautifulSoup4(bs4)](#bs4)
+
+### 1. 문자열 관련 메소드<span id="string"></span>
+
 
 ```python
 # 문자열 교체
@@ -46,7 +52,7 @@ len('hello')
 
 ---
 
-### 2. 정규표현식(re모듈)
+### 2. 정규표현식(re모듈)<span id="re"></span>
 
 + 반복횟수
 \* : 0회 이상 반복
@@ -125,6 +131,40 @@ re.findall('[a-z]+','123abc45')
 >>> ['abc']
 ```
 
+### 3. 파싱 라이브러리 BeautifulSoup4(bs4)<span id="bs4"></span>
+
+아래 코드는 크롤링한 데이터를 Python파일와 같은 위치에 result.json을 만들어 저장하는 예제.(이준범님 코드)
+
+내가 직접 만든 크롤러는 [NewsCralwer](https://github.com/MaliciousJ/NewsCrawler)를 참고하자.
+
+여러 특성(제목, 날짜, 키워드분류 등)에 대한 분류가 가능하다.
+
+```python
+# parser.py
+import requests
+from bs4 import BeautifulSoup
+import json
+import os
+
+# python파일의 위치
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
+req = requests.get('https://beomi.github.io/beomi.github.io_old/')
+html = req.text
+soup = BeautifulSoup(html, 'html.parser')
+my_titles = soup.select(
+    'h3 > a'
+    )
+
+data = {}
+
+for title in my_titles:
+    data[title.text] = title.get('href')
+
+with open(os.path.join(BASE_DIR, 'result.json'), 'w+') as json_file:
+    json.dump(data, json_file)
+```
+
 ---
 
 ## 참고자료
@@ -132,3 +172,4 @@ re.findall('[a-z]+','123abc45')
 2. [파이썬 str 문자열 객체 메소드 함수 정리](https://withcoding.com/74)
 3. [파이썬 정규표현식(re) 사용법](https://greeksharifa.github.io/정규표현식(re)/2018/07/20/regex-usage-01-basic/)
 4. [정규식 단어 경계 메타 문자의 정확한 이해](https://ohgyun.com/392)
+5. [나만의 웹 크롤러 만들기 with Requests/BeautifulSoup](https://beomi.github.io/2017/01/20/HowToMakeWebCrawler/)
