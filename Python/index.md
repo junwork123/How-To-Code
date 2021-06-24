@@ -15,11 +15,10 @@
 s = s[::-1]
 
 # 문자열 교체(공백 or 특정문자제거)
-s = s.replace(" ", "")
-s = s.replace('!@#$%^&*() ',"")
+s = s.replace(' ', '')
 
 import re
-s = re.sub(r"[^a-zA-Z0-9]","",s)
+s = re.sub(r'[^a-zA-Z0-9]','',s)
 
 # 문자열 나눔
 s = 'h e l l o'
