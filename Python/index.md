@@ -5,10 +5,9 @@
 
 [2. 정규표현식(re모듈)](#re)
 
-[3. 파싱 라이브러리 BeautifulSoup4(bs4)](#bs4)
+[4. 파싱 라이브러리 BeautifulSoup4(bs4)](#bs4)
 
-### 1. 문자열 관련 메소드<span id="string"></span>
-
+### 문자열 관련 메소드<span id="string"></span>
 
 ```python
 # 문자열 뒤집기
@@ -58,7 +57,47 @@ len('hello')
 
 ---
 
-### 2. 정규표현식(re모듈)<span id="re"></span>
+### 리스트 관련 함수<span id="list"></span>
+
+```python
+
+# 리스트 뒤집기
+l.reverse()
+
+# List Comprehensions 방식으로 생성하기
+l = [i * i for in range(10)
+l = [i for i in L if i % 3 == 0)
+
+# 리스트 안에 값 확인
+print(5 in l)
+print(5 not in l)
+
+# 리스트 값 추가
+l.append(val) # 값 추가
+
+l.insert(index, val) # 값 추가
+
+l.extend(iterable) # iterable 인자를 넘겨 리스트에 추가
+l.extend(range(10,13)) # 10~12까지 
+
+# 리스트 값 삭제
+del(l[index]) # 특정 인덱스 삭제
+
+del(l) # 리스트 자체 삭제
+
+l.pop(index) # 특정 인덱스 위치의 값을 리턴하면서 삭제
+
+l.remove(val) # 전달한 값을 삭제
+
+l.clear() # 리스트 값 모두 삭제(빈 리스트 생성)
+
+# 리스트 정렬
+l.sort() # 오름차순 정렬
+l.sort(reverse=True) # 내림차순 정렬
+```
+
+
+### 정규표현식(re모듈)<span id="re"></span>
 
 
 + 주요 메소드
@@ -160,7 +199,7 @@ X, VERBOSE : 정규식 안의 공백을 무시
 I, IGNORECATE : 대소문자를 구별하지 않는다.
 
 
-### 3. 파싱 라이브러리 BeautifulSoup4(bs4)<span id="bs4"></span>
+### 파싱 라이브러리 BeautifulSoup4(bs4)<span id="bs4"></span>
 
 아래 코드는 크롤링한 데이터를 Python파일와 같은 위치에 result.json을 만들어 저장하는 예제.(이준범님 코드)
 
@@ -202,3 +241,4 @@ with open(os.path.join(BASE_DIR, 'result.json'), 'w+') as json_file:
 3. [파이썬 정규표현식(re) 사용법](https://greeksharifa.github.io/정규표현식(re)/2018/07/20/regex-usage-01-basic/)
 4. [정규식 단어 경계 메타 문자의 정확한 이해](https://ohgyun.com/392)
 5. [나만의 웹 크롤러 만들기 with Requests/BeautifulSoup](https://beomi.github.io/2017/01/20/HowToMakeWebCrawler/)
+6. [파이썬 list 리스트 사용법 정리 (삽입, 삭제, 정렬)](https://withcoding.com/75)
