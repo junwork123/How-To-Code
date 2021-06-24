@@ -11,12 +11,19 @@
 
 
 ```python
-# 문자열 교체
-str.replace('new', 'old')
+# 문자열 뒤집기
+s = s[::-1]
+
+# 문자열 교체(공백 or 특정문자제거)
+s = s.replace(" ", "")
+s = s.replace('!@#$%^&*() ',"")
+
+import re
+s = re.sub(r"[^a-zA-Z0-9]","",s)
 
 # 문자열 나눔
-str = 'h e l l o'
-str.split(' ')
+s = 'h e l l o'
+s.split(' ')
 >>> ['h','e','l','l','o']
 
 # 문자열 연결
@@ -53,6 +60,35 @@ len('hello')
 ---
 
 ### 2. 정규표현식(re모듈)<span id="re"></span>
+
+
++ 주요 메소드
+```python
+import re
+
+# 특수문자 제거
+s = re.sub(r"[^a-zA-Z0-9]","",s)
+
+# 동일한 구문을 많이 써야하는 경우 정규식 객체를 반환
+c = re.compile('[0-9]')
+
+# 문자열 전체에서 검색
+re.search('[a-z]', '123abc45').start()
+>>> 3
+re.search('[a-z]', '123abc45').end()
+>>> 4
+
+re.search('[a-z]+', '123abc45').start()
+>>> 3
+re.search('[a-z]+', '123abc45').end()
+>>> 6
+
+# 문자열 전체에서 일치하는 모든 부분을 검색
+re.findall('[a-z]','123abc45')
+>>> ['a', 'b', 'c']
+re.findall('[a-z]+','123abc45')
+>>> ['abc']
+```
 
 + 반복횟수
 
@@ -124,28 +160,6 @@ X, VERBOSE : 정규식 안의 공백을 무시
 
 I, IGNORECATE : 대소문자를 구별하지 않는다.
 
-+ 주요 메소드
-```python
-# 동일한 구문을 많이 써야하는 경우 정규식 객체를 반환
-c = re.compile('[0-9]')
-
-# 문자열 전체에서 검색
-re.search('[a-z]', '123abc45').start()
->>> 3
-re.search('[a-z]', '123abc45').end()
->>> 4
-
-re.search('[a-z]+', '123abc45').start()
->>> 3
-re.search('[a-z]+', '123abc45').end()
->>> 6
-
-# 문자열 전체에서 일치하는 모든 부분을 검색
-re.findall('[a-z]','123abc45')
->>> ['a', 'b', 'c']
-re.findall('[a-z]+','123abc45')
->>> ['abc']
-```
 
 ### 3. 파싱 라이브러리 BeautifulSoup4(bs4)<span id="bs4"></span>
 
