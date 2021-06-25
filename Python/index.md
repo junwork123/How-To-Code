@@ -94,7 +94,22 @@ l.clear() # 리스트 값 모두 삭제(빈 리스트 생성)
 # 리스트 정렬
 l.sort() # 오름차순 정렬
 l.sort(reverse=True) # 내림차순 정렬
+
+# 리스트 길이
+len(l)
+
+# 리스트 문자열 합치기
+A = ["a", "b", "c"]
+l = "".join(A)
+
+# 리스트 내부 정렬
+# 띄어쓰기 기준으로 나눈 뒤 사전식 정렬, 같을 경우 맨 앞 기준 정렬
+l.sort(key=lambda x : l.split()[1:], l.split()[0]) 
+
 ```
+
+
+
 
 
 ### 정규표현식(re모듈)<span id="re"></span>
