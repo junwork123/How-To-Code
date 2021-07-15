@@ -7,7 +7,8 @@
 
 [3. 정규표현식(re모듈)](#re)
 
-[4. 파싱 라이브러리 BeautifulSoup4(bs4)](#bs4)
+[4. List Comprehention](#compre)
+
 
 ### 문자열 관련 메소드<span id="string"></span>
 
@@ -24,37 +25,37 @@ s = re.sub(r'[^a-zA-Z0-9]','',s)
 # 문자열 나눔
 s = 'h e l l o'
 s.split(' ')
->>> ['h','e','l','l','o']
+= ['h','e','l','l','o']
 
 # 문자열 연결
 list = ['h','e','l','l','o']
 ''.join(list)
->>> hello
+= hello
 
 # 문자열 판단
 'year2017'.isalnum()
->>> True
+= True
 
 'year2017!!!'.isalnum()
->>> False
+= False
 
 # 문자열 길이
 len('hello')
->>> 5
+= 5
 
 # 문자열 검색
 'hello'.find('l')
->>> 2
+= 2
 
 # find와 동일, 없을 때 예외를 발생
 'hello'.index('l')
->>> 2
+= 2
 
 'l' in 'hello'
->>> True
+= True
 
 'l' not in 'hello'
->>> False
+= False
 ```
 
 ---
@@ -133,20 +134,20 @@ c = re.compile('[0-9]')
 
 # 문자열 전체에서 검색
 re.search('[a-z]', '123abc45').start()
->>> 3
+= 3
 re.search('[a-z]', '123abc45').end()
->>> 4
+= 4
 
 re.search('[a-z]+', '123abc45').start()
->>> 3
+= 3
 re.search('[a-z]+', '123abc45').end()
->>> 6
+= 6
 
 # 문자열 전체에서 일치하는 모든 부분을 검색
 re.findall('[a-z]','123abc45')
->>> ['a', 'b', 'c']
+= ['a', 'b', 'c']
 re.findall('[a-z]+','123abc45')
->>> ['abc']
+= ['abc']
 ```
 
 + 자주 쓰이는 예시
@@ -235,6 +236,27 @@ $ : 문자열의 마지막과 매치
 X, VERBOSE : 정규식 안의 공백을 무시
 
 I, IGNORECATE : 대소문자를 구별하지 않는다.
+
+### List Comprehention<span id="compre"></span>
+```python
+
+string1 = 'abc'
+string2 = 'acc'
+
+# 문자열에서 한글자씩 뽑아서 출력
+char for char in string
+= ['a', 'b', 'c']
+
+# 문자열1에 있는 글자가 2에 있는지 출력
+char in string2 for char in string
+= [True, False, True]
+
+# 문자열1에 있는 글자가 2에 몇개나 있는지 출력
+sum(char in string2 for char in string)
+= 2
+
+```
+
 
 
 ### 파싱 라이브러리 BeautifulSoup4(bs4)<span id="bs4"></span>
