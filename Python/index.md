@@ -260,16 +260,35 @@ sum(char in string2 for char in string)
 ```
 ### 유용한 함수<span id="useful"></span>
 ```python
+# zip() = 두 개 이상의 시퀀스를 하나로 묶어서 튜플로 반환
+# zip은 제너레이터를 반환하므로 출력 시 list(zip(x,y))형태로 사용
+
 x = [1,2,3,4,5]
 y = [a,b,c,d]
 z = [ㄱ,ㄴ]
 
-# 두 개 이상의 시퀀스를 하나로 묶어서 튜플로 반환
-zip(x,y)
+# zip 개별 접근 및 튜플 반환 확인
+d = list(zip(x,y))
+print(d)
 = [(1,a), (2,b), (3,c), (4,d)]
 
-zip(x,w,z)
+d[0] 
+= (1,a)
+
+d[0][0]
+= 1
+
+d[0][0]
+
+# 하나 묶기
+list(zip(x))
+= [(1,), (2,), (3,), (4,)]
+
+# 3개 묶기
+list(zip(x,y,z))
 = [(1,a,ㄱ), (2,b,ㄴ)]
+
+# ---------------------------------------
 
 # 아스테리스크(*) : 시퀀스 언패킹 연산자
 fruit = [apple, tomato, banana]
@@ -287,7 +306,7 @@ print(c)
 # 아스테리스크 2개(**)는 사전(Dictionary)과 같은 키/값 페어 연산에서 사용
 info = {'year' : 2014, 'month' : 12, 'day' : 25}
 newInfo1 = {'year' : 2021, **info}
-newInfo2= {**info, 'month' : 1, 'day' : 25}
+newInfo2 = {**info, 'month' : 1, 'day' : 25}
 
 
 ```
