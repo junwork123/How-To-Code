@@ -9,6 +9,8 @@
 
 [4. List Comprehention](#compre)
 
+[5. 유용한 함수](#useful)
+
 
 ### 문자열 관련 메소드<span id="string"></span>
 
@@ -256,7 +258,39 @@ sum(char in string2 for char in string)
 = 2
 
 ```
+### 유용한 함수<span id="useful"></span>
+```python
+x = [1,2,3,4,5]
+y = [a,b,c,d]
+z = [ㄱ,ㄴ]
 
+# 두 개 이상의 시퀀스를 하나로 묶어서 튜플로 반환
+zip(x,y)
+= [(1,a), (2,b), (3,c), (4,d)]
+
+zip(x,w,z)
+= [(1,a,ㄱ), (2,b,ㄴ)]
+
+# 아스테리스크(*) : 시퀀스 언패킹 연산자
+fruit = [apple, tomato, banana]
+*fruit = apple, tomato, banana
+
+# 앞의 파라미터 갯수만큼 넣고 나머지는 언패킹하여 b에 넣음
+a, b, *c = [1,2,3,4]
+print(a)
+= 1
+print(b) 
+= 2
+print(c)
+= [3,4]
+
+# 아스테리스크 2개(**)는 사전(Dictionary)과 같은 키/값 페어 연산에서 사용
+info = {'year' : 2014, 'month' : 12, 'day' : 25}
+newInfo1 = {'year' : 2021, **info}
+newInfo2= {**info, 'month' : 1, 'day' : 25}
+
+
+```
 
 
 ### 파싱 라이브러리 BeautifulSoup4(bs4)<span id="bs4"></span>
