@@ -115,6 +115,10 @@ l = "".join(A)
 # 띄어쓰기 기준으로 나눈 뒤 사전식 정렬, 같을 경우 맨 앞 기준 정렬
 l.sort(key=lambda x : l.split()[1:], l.split()[0]) 
 
+# defaultDict를 탐색할 때 
+# list()로 감싸줘야 key size changed 에러 발생 방지
+for item in list(newDict):
+    #----
 ```
 
 
