@@ -73,6 +73,9 @@ l.reverse()
 l = [i * i for in range(10)
 l = [i for i in L if i % 3 == 0)
 
+# 2차원 배열 동적 생성(다익스트라)
+graph = [[[0] for x in range(n)] for y in range(n)]
+
 # 리스트 안에 값 확인
 print(5 in l)
 print(5 not in l)
