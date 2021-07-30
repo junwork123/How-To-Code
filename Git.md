@@ -2,10 +2,19 @@ Git 사용법에 대해서 정리한 문서입니다.
 원글은 본문 하단에 링크로 첨부합니다.
 
 ## INDEX
-1. [case : 오픈소스에 기여하기](#contribute)
-2. [2. 빌드 자동화하기(Jenkins)](#jenkins)
+[Git 커맨드 모음](#command)
+[Git 오픈소스 활동기](#contribute)
+[Git 빌드 자동화하기(Jenkins)](#jenkins)
 
-## 1. 오픈소스에 기여하기<span id="contribute"></span>
+## GGit 커맨드 모음<span id="command"></span>
+원격 저장소 브랜치 삭제하기
+git push origin --delete '브랜치명'
+
+로컬 저장소 브랜치 삭제하기
+git branch -d '브랜치명'
+
+
+## Git 오픈소스 활동<span id="contribute"></span>
 
 * 오픈소스를 먼저 fork를 하면 내 저장소에 저장된다.
 이후 내 컴퓨터 한켠에 소중하게 당겨와본다
