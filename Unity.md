@@ -23,3 +23,7 @@
 
 - 텔레포트
 transform.position = new vector3 (x, y, z);
+
+- UI 비율 (https://solution94.tistory.com/76)
+Canvas에 Canvas Renderer 넣고 렌더 모드를 Screen Space - Camera로 변경
+카메라도 Projection 값을 Orthographic으로 변경
