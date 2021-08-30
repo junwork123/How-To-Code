@@ -66,7 +66,9 @@ len('hello')
 
 ```python
 # 알파벳 생성하기
+from string import ascii_lowercase
 list(string.ascii_lowercase)
+
 list(map(chr, range(97, 123)))
 [chr(i) for i in range(ord('a'),ord('z')+1)]
 
