@@ -65,6 +65,11 @@ len('hello')
 ### 리스트 관련 함수<span id="list"></span>
 
 ```python
+# 알파벳 생성하기
+list(string.ascii_lowercase)
+list(map(chr, range(97, 123)))
+[chr(i) for i in range(ord('a'),ord('z')+1)]
+
 
 # 리스트 뒤집기
 l.reverse()
