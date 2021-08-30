@@ -29,6 +29,9 @@ s = 'h e l l o'
 s.split(' ')
 = ['h','e','l','l','o']
 
+list(s)
+[char for char in s]
+
 # 문자열 연결
 list = ['h','e','l','l','o']
 ''.join(list)
