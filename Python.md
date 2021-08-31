@@ -279,6 +279,11 @@ sum(char in string2 for char in string)
 ```
 ### 유용한 함수<span id="useful"></span>
 ```python
+# 프로그래머스 로그 찍기
+# import logging
+# logging.warning('tempList : {}'.format(tempList))
+
+
 # zip() = 두 개 이상의 시퀀스를 하나로 묶어서 튜플로 반환
 # zip은 제너레이터를 반환하므로 출력 시 list(zip(x,y))형태로 사용
 
