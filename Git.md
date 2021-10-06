@@ -3,16 +3,22 @@ Git 사용법에 대해서 정리한 문서입니다.
 
 ## INDEX
 [Git 커맨드 모음](#command)
+
 [Git 오픈소스 활동기](#contribute)
+
 [Git 빌드 자동화하기(Jenkins)](#jenkins)
 
-## GGit 커맨드 모음<span id="command"></span>
+## Git 커맨드 모음<span id="command"></span>
 원격 저장소 브랜치 삭제하기
 git push origin --delete '브랜치명'
 
 로컬 저장소 브랜치 삭제하기
 git branch -d '브랜치명'
 
+용량이 큰 파일 저장하기
+git install lfs
+
+git track "추적할 파일.확장자" ex) "*.so"
 
 ## Git 오픈소스 활동<span id="contribute"></span>
 
